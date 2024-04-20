@@ -44,7 +44,7 @@ resource "aws_instance" "ec2" {
     ami           = "ami-007020fd9c84e18c7"
     instance_type = "t2.micro"
     tags = {
-        Name = "MyInstance"
+        Name = var.instance_name
     }
     vpc_security_group_ids = [ aws_security_group.sg.id ]
     associate_public_ip_address = true
